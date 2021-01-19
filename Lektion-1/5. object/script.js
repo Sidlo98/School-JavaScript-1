@@ -56,13 +56,15 @@ const user = {
     '0735872940',
     '0735987230'
   ],
-  isActive: true,
+  isActive: false,
 
   fullName: function() {
-    return `${this.firstName} ${this.lastName}`
+    console.log(`${this.firstName} ${this.lastName}`)
+  },
+  login: function(){
+    this.isActive = true
   }
-
-}
+};
 
 let key = 'lastName';
 
@@ -75,7 +77,7 @@ let key = 'lastName';
 
 // console.log(user.fullName())
 
-let firstName = user.firstName;
+// let firstName = user.firstName;
 // console.log(firstName)
 
 // console.log(`användaren heter ${user.firstName} och bor i ${user.address.city}.`);
@@ -87,6 +89,26 @@ user.firstName = 'Gleen';
 // user = 3; det här går inte när det är en const
 
 //lägga till eller ändra
-user.email = 'pontus.sidlo@outlook.se'
+user.email = 'pontus.sidlo@outlook.se';
 
 // console.log(user.email)
+
+// Destructure
+//-------------------------------------------------------------
+
+const { firstName, lastName, address: { city } } = user;
+console.log(firstName, lastName);
+console.log(city);
+
+const { firstName: fName, lastName: lName } = user;
+console.log(fName);
+console.log(lName);
+
+user.fullName();
+console.log(user.isActive);
+user.login();
+console.log(user.isActive);
+
+console.log(user.phoneNumbers[1])
+user.age ++
+console.log(user.age)
