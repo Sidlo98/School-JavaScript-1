@@ -76,7 +76,7 @@ console.log(names);
 
 // hämta en indexplats av ett värde
 let index = names.indexOf('Hans');
-console.log(index);
+// console.log(index);
 
 // När vi vill ha en indexplats om arrayen innehåller object
 let userIndex = array.findIndex(user => user.firstName === 'Tommy');
@@ -90,4 +90,63 @@ let user = array.find(user => user.id === 2);
 //delete names[index];
 // names.splice(index, 1);
 // names.splice(names.indexOf('Hans'), 1);
-console.log(names)
+// console.log(names)
+
+//array.map(); - retunerar en array med utvalda värden från en befintlig array
+
+
+//filtrerar en array baserat på ett värde 
+const idArray = array.filter(user => {
+  // return user.id > 2;
+  return user.id !== 5;
+});
+// console.log(idArray);
+
+//  FOREACH LOOP
+array.forEach(user => {
+  const {firstName, lastName } = user;
+  // console.log(`Name: ${firstName} ${lastName}`);
+  document.body.innerHTML += `
+  <p>Name: ${firstName} ${lastName}</p>
+  `
+});
+
+
+//LOOPAR
+
+//for
+
+for(let i = 0; i <names.length; i++) {
+  let p = document.createElement('p');
+  p.innerText = names[i];
+
+  document.body.appendChild(p);
+  // console.log(names[i]);
+};
+
+// for of
+for(user of array ) {
+  // console.log(user.lastName);
+};
+
+
+//While
+
+let i = 0;
+
+while(i < names.length) {
+  console.log(names[i]);
+  i++ // VIKTIGT ANNARS BLIR DET EN OÄNDLIG LOOP!
+};
+
+// console.log(i)
+
+
+// Do while - kommer alltid att köras minst en gång
+do {
+  console.log(i);
+  i++; // VIKTIGT ANNARS BLIR DET EN OÄNDLIG LOOP!
+}
+while(i < 10);
+
+console.log(i);
