@@ -92,9 +92,6 @@ let string = '13';
   ! else
 
   
-
-
-
     varianter
     -----------------------------
 
@@ -176,3 +173,128 @@ let string = '13';
    ||   eller
    !    not
 */
+
+
+// if(1 == 1) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// };
+
+// if(1 === '1')
+// console.log(true);
+// else
+//   console.log(false);
+
+
+// if(1 == '1' && 1 < 2)   // && med dessa måste ALLA vara true
+// console.log('sant');
+// else
+// console.log('falskt');
+
+
+// if(1 == '1' || 1 < 1)   // || med dessa behöver ETT av statementsen vara true
+// console.log('sant');
+// else
+// console.log('falskt');
+
+
+// if(1 == '1' && 1 < 1 || 1 < 2)  // det går att blanda hur vi vill värde && värde || värde då måste de två värdena till vänster eller det värdet till höger 
+// console.log('sant');            // vara sant för att ge true till statementet
+// else
+// console.log('falskt');
+
+
+let st = '15';
+let nr = 13;
+
+// if (!(st > nr && typeof st === typeof nr)) {
+//   console.log('sant st är större än nr')
+// }
+// else {
+//   console.log('det är falskt dom har inte samma datatyp')
+// }
+
+// let loggedIn = false;
+
+// if(loggedIn) {
+//   console.log('den här koden körs om loggedIn är true')
+// }
+// else {
+//   console.log('Vi är inte inloggade, göm alla skyddade länkar')
+  // länkar.hide()
+// }
+
+// i i statementet vändre på if satsens utförande
+// if(!loggedIn) {
+//   console.log('den här koden körs om loggedIn är false')
+//   länkar.hide()
+// }
+
+// let products = [
+//   {id: 1, name: 'acer 43 ultrawide', price: 7000},
+//   {id: 2, name: 'samsung S21', price: 28000},
+//   {id: 3, name: 'risnudlar', price: 10},
+// ]
+
+// products = products.map(product => {
+
+//   if(product.id === 2 || product.id === 1) {
+//     product.price = 12000
+//     console.log('Changed ' + product.name + ' Price');
+//   }
+//   else if(product.id === 3) {
+//         product.price = 20
+//         console.log('changed ' + product.name + ' price');
+//       }
+//   return product
+// })
+
+//  console.log(products);
+
+// let employees = [
+//   {firstName: 'Joakim', lastName: 'Whalström', age: 34},
+//   {firstName: 'Hans', lastName: 'Mattin-Lassei', age: 36},
+//   {firstName: 'Tommy', lastName: 'Mattin-Lassei', age: 38},
+//   {firstName: 'Haitem', lastName: 'Simrani', age: 35},
+// ]
+
+
+// let letters = []
+
+// employees.forEach(person => {
+
+//   if(letters.length === 0) {
+//     let name = person.firstName.slice(0, 1)
+//     letters.push(name)
+//   }
+
+//   if(person.age < 35){
+//     console.log((person.firstName + ' är bäst.. Alla andra är rätt gamla!'))
+//   }
+// })
+
+// console.log(letters)
+
+
+
+// let color = 'blue';
+
+// if(color === 'red') {
+//   console.log('färgen är röd');
+// }
+// else if(color === 'blue'){
+//   console.log('färgen är blå');
+// }
+// else if(color === 'orange'){
+//   console.log('färgen är orange');
+// }
+// else if(color === 'white'){
+//   console.log('färgen är vit');
+// }
+// else if(color === 'black'){
+//   console.log('färgen är svart');
+// }
+// else {
+//   console.log('färgen du har angätt finns inte i databasen');
+// }
