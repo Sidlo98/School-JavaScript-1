@@ -67,14 +67,14 @@ const fullName = function(FirstName, lastName) {
   return fullName
 }
 
-let myName = fullName('Joakim', 'Wahlström');
+// let myName = fullName('Joakim', 'Wahlström');
 // console.log(myName);
 // console.log(fullName('Hans', 'Mattin-Lassei'));
 
 
 const func2 = function(firstName = 'John', lastName = 'Doe') {
   let _fullName = firstName + ' ' + lastName
-  console.log(_fullName.trim())
+  // console.log(_fullName.trim())
 }
 
 // func2();
@@ -111,21 +111,61 @@ const greet = name => `Hej ${name}`
 // CALLBACK FUNCTIONS
 
 const func = (callback) => {
-  //Jag räknar ut ett värde / skapar något / eller vad som helst.
+  // Jag räknar ut ett värde / skapar något / eller vad som helst.
   let value = 'test';
   callback(value);
 }
 
-func(vadSom => {   // Här har jag automatiskt tillgång till parametern som skickar från den första functionen.
+// func(vadSom => {   // Här har jag automatiskt tillgång till parametern som skickar från den första functionen.
   //Här kan jag välja vad jag vill göra med den parametern
-  console.log(vadSom);
-  console.log(vadSom);
-  console.log(vadSom);
-})
+//   console.log(vadSom);
+//   console.log(vadSom);
+//   console.log(vadSom);
+// })
 
 // Exempel på en callback funktion
 let names = ['Joakim', 'Jeanette', 'Hans', 'Jack'];
 
-names.forEach(name => {
-  console.log(name)
-})
+// names.forEach(name => {
+//   console.log(name)
+// })
+
+
+/* 
+  METODER/METHODS
+  --------------------------------------------------
+  metoder är funktioner som är inbyggda på ett objekt
+
+  metoder deklarerar vi inne i ett objekt men aldrig som en arrow function för då blir det problem med this.
+
+*/
+
+// Exempel på motoder
+
+// array metod
+// names.forEach(name => {
+//   console.log(name)
+// })
+
+// string metod
+// let myName = names[0]
+// console.log(myName)
+
+// let upper = myName.toUpperCase();
+// console.log(upper);
+
+let user = {
+  firstName: 'Joakim',
+  lastName: 'Wahlström',
+  fullName() {
+    console.log(this);
+    return this.firstName + ' ' + this.lastName;
+  }
+  // fullName: () => {
+  //   console.log(this);
+  //   return this.firstName + ' ' + this.lastName;
+  // }
+}
+// console.log(this)
+console.log(user.fullName());
+// user.fullName();
