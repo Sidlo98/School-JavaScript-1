@@ -56,7 +56,6 @@ class Student extends Person {
   }
 }
 
-
 const t1 = new Teacher('Joakim', 'Wahlström', 1, ['Javascript', 'React', 'Vue', 'UX-Design']);
 
 console.log(t1.fullName());
