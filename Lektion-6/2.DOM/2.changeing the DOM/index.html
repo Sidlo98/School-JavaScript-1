@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./custom.css" />
+    <title>changing the DOM</title>
+    <style>
+      body {
+        background-color: #333;
+        color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- äldre sätt att göra det funkar men inte rekomenderat när vi ska deklarera event -->
+    <button onclick="changeText()">Update text</button>
+    <div id="div1">En text</div>
+
+    <br /><br /><br />
+
+    <button id="btn">Change Color</button>
+    <div id="div2" class="upper">En text</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
